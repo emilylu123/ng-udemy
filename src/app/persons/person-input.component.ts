@@ -6,10 +6,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./person-input.component.css'],
 })
 export class PersonInputComponent {
-  @Output() personCreate = new EventEmitter<string>();
+  // listen from outside with @Output()
+  @Output()
+  personCreate = new EventEmitter<string>();
   enteredPersonName: string = '';
   onCreatePerson() {
-    console.log('Name: ' + this.enteredPersonName);
     this.personCreate.emit(this.enteredPersonName);
     this.enteredPersonName = '';
   }

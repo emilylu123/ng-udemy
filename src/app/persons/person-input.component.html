@@ -1,7 +1,7 @@
 <label for="name">Name: </label>
 
-<!-- 2 way binding on input elements -->
+<!-- 2 way binding on input elements with [(ngModel)]-->
 <input type="text" id="name" [(ngModel)]="enteredPersonName">
 
-<!-- event binding -->
+<!-- event binding with ()-->
 <button (click)="onCreatePerson()">Create</button>
