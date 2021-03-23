@@ -1,3 +1,4 @@
+import { PersonsService } from './persons.service';
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,11 +8,16 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class PersonInputComponent {
   // listen from outside with @Output()
-  @Output()
-  personCreate = new EventEmitter<string>();
+  // @Output()
+  // personCreate = new EventEmitter<string>();
+
   enteredPersonName: string = '';
+
+  constructor(private PersonsService: PersonsService) {}
+
   onCreatePerson() {
-    this.personCreate.emit(this.enteredPersonName);
+    // this.personCreate.emit(this.enteredPersonName);
+    this.PersonsService.addPerson(this.enteredPersonName);
     this.enteredPersonName = '';
   }
 }
