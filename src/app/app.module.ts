@@ -7,6 +7,7 @@ import { PersonInputComponent } from './persons/person-input.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './courses/courses.service';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     PersonInputComponent,
     CoursesComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [CoursesService],
   bootstrap: [AppComponent],
 })
