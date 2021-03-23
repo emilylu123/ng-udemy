@@ -2,5 +2,5 @@
 <ul>
   <!-- use *ngFor to display person in string [] -->
   <!-- string interpolation with {{}}-->
-  <li *ngFor="let person of personList">{{ person }}</li>
+  <li *ngFor="let person of personList" (click)="onRemovePerson(person)">{{ person }}</li>
 </ul>
