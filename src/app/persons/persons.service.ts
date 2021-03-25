@@ -7,7 +7,6 @@ import { map } from 'rxjs/operators';
 })
 export class PersonsService {
   personsChanged = new Subject<string[]>();
-  // persons: string[] = ['Emily'];
   persons: string[] = [];
 
   constructor(private http: HttpClient) {}

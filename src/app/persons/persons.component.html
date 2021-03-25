@@ -1,6 +1,7 @@
 <p *ngIf='isFetching'>Fetching Data!</p>
 <ul *ngIf='!isFetching'>
-  <!-- use *ngFor to display person in string [] -->
+  <!-- use *ngFor to display person
+    property binding with [] -->
   <!-- string interpolation with {{}}-->
   <li *ngFor="let person of personList" (click)="onRemovePerson(person)">{{ person }}</li>
 </ul>
